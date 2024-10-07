@@ -10,7 +10,9 @@
 }
 
 .project-filter {
-    @include flex-start;
+    @include flex-center;
+    align-items: center !important;
+    justify-content: center !important;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 4rem 0 2rem;
@@ -27,7 +29,7 @@
             background-color: $accent-color;
             color: $text-color100;
         }
-        @include media ('xl-screen') {
+        @include media('xl-screen') {
             padding: 1rem 2rem;
             border-radius: 0.85rem;
         }
@@ -54,7 +56,7 @@
         &:hover {
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
         }
-        @include media ('xl-screen') {
+        @include media('xl-screen') {
             width: 470px;
             padding: 1.25rem;
             border-radius: 0.75rem;
@@ -76,7 +78,7 @@
         border-radius: 0.5rem;
         object-fit: cover;
     }
-    @include media ('xl-screen') {
+    @include media('xl-screen') {
         height: 350px;
     }
 }
@@ -118,7 +120,7 @@
     h4 {
         margin-top: 1rem;
         line-height: $leading-base;
-        @include media ('xl-screen') {
+        @include media('xl-screen') {
             margin-top: 3rem;
         }
     }

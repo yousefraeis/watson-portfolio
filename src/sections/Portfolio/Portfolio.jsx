@@ -37,7 +37,7 @@ const Portfolio = () => {
                     My Creative <span>Portfolio</span> Section
                 </h2>
 
-                <div className="project-filter">
+                <div className="project-filtern flex-center">
                     {workFilterCategories.map((filter, index) => (
                         <div
                             key={index}
