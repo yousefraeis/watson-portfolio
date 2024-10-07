@@ -17,13 +17,14 @@
     flex-wrap: wrap;
     margin: 4rem 0 2rem;
     .project-filter-item {
+        @include flex-center;
         padding: 0.5rem 1rem;
         border-radius: 0.5rem;
         background-color: $white-color;
         color: $text-color900;
         font-weight: $fw-extraBold;
         transition: $transition-all;
-        margin: 0.5rem;
+        margin: 0.5rem auto;
         cursor: pointer;
         &:hover {
             background-color: $accent-color;
