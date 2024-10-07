@@ -75,7 +75,7 @@ This will create a `build` folder containing the optimized version of your appli
 
 ## 🌐 Live Demo
 
-Experience the live demo [here](#https://watson-chi.vercel.app/).
+Experience the live demo [here](https://watson-chi.vercel.app/).
 
 ## 🎉 Acknowledgements
 
