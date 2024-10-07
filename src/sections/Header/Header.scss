@@ -1,0 +1,156 @@
+@import '../../scss/_variables';
+@import '../../scss/_components';
+@import '../../scss/_mixins';
+@import '../../scss/_utilities';
+
+#home {
+    position: relative;
+    background: url('../../assets/bgIMG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.header-container {
+    flex: 1 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    padding-top: 5.5rem;
+    flex-direction: column;
+    @include media('lg-screen') {
+        flex-direction: row;
+    }
+    @include media('xl-screen') {
+        padding-top: 8rem;
+    }
+}
+
+.header-info {
+    @include flex-start;
+    flex-direction: column;
+    flex: 0.65 1;
+    height: 100%;
+    margin: auto auto auto 0;
+    padding: 1rem;
+    @include media('lg-screen') {
+        margin: 0 auto auto 0;
+    }
+}
+
+.header-badge {
+    width: 100%;
+    @include flex-start;
+    flex-direction: column;
+    .badge-container,
+    .tags-container {
+        width: auto;
+        padding: 1rem 2rem;
+        border-radius: 15px;
+        flex-direction: row;
+        background: $white-color;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+    .tags-container {
+        flex-direction: column;
+        margin-top: 3rem;
+        p {
+            width: 100%;
+            text-transform: uppercase;
+            text-align: right;
+        }
+    }
+    span {
+        font-size: 2.5rem;
+        @include media('lg-screen') {
+            font-size: 5rem;
+        }
+    }
+    @include media('lg-screen') {
+        @include flex-end;
+    }
+}
+
+.profile-image-container {
+    @include flex-end;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    img {
+        width: 100%;
+        object-fit: contain;
+        z-index: 1;
+    }
+    .overlay-circle {
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+}
+
+.skills-circles {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 0.75;
+    margin-left: 0;
+    div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: $white-color;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        img {
+            width: 60%;
+            height: 60%;
+        }
+    }
+
+    /* Circle shapes with different sizes */
+    div:nth-child(1) {
+        width: 100px;
+        height: 100px;
+    }
+
+    div:nth-child(2) {
+        margin: 1.75rem;
+        width: 150px;
+        height: 150px;
+    }
+
+    div:nth-child(3) {
+        width: 70px;
+        height: 70px;
+    }
+
+    @include media('lg-screen') {
+        margin-left: 1rem;
+        flex-direction: column;
+        div {
+            margin: 0rem;
+        }
+    }
+
+    @include media('xl-screen') {
+        div:nth-child(2) {
+            width: 400px;
+            height: 400px;
+        }
+
+        div:nth-child(3) {
+            width: 170px;
+            height: 170px;
+        }
+
+        div:nth-child(1) {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}

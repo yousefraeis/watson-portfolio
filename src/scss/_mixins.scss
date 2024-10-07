@@ -1,0 +1,60 @@
+// _mixins.scss
+
+// Define breakpoints
+$breakpoints: (
+    'xs-screen': 450px,
+    'sm-screen': 768px,
+    'md-screen': 900px,
+    'lg-screen': 1200px,
+    'xl-screen': 2000px,
+);
+
+// Mixin for media queries
+@mixin media($label) {
+    @if map-has-key($breakpoints, $label) {
+        $value: map-get($breakpoints, $label);
+        @media screen and (min-width: $value) {
+            @content;
+        }
+    } @else {
+        @warn "No value found for '#{$label}'.";
+    }
+}
+
+// _mixins.scss
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+@mixin flex-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-evenly {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

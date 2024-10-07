@@ -1,0 +1,110 @@
+@import '../../scss/_variables';
+@import '../../scss/_components';
+@import '../../scss/_mixins';
+@import '../../scss/_utilities';
+
+.app__navbar {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    background-color: rgba(237, 242, 248, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    position: fixed;
+    z-index: 10;
+}
+
+.app__navbar-logo {
+    img {
+        width: 90px;
+        height: 20px;
+    }
+    @include media('xl-screen') {
+        width: 180px;
+        height: 40px;
+    }
+}
+
+.app__navbar-links {
+    display: none;
+    @include media('md-screen') {
+        @include flex-center;
+        flex: 1;
+        li {
+            margin-inline: 1rem;
+            flex-direction: column;
+        }
+        a {
+            color: $text-color;
+            font-weight: $fw-regular;
+            transition: $transition-all;
+            cursor: pointer;
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+.app__navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    @include flex-center;
+    background-color: $accent-color;
+    svg {
+        width: 70%;
+        height: 70%;
+        color: $white-color;
+    }
+    div {
+        position: fixed;
+        inset: 0;
+        z-index: 5;
+        padding: 1rem;
+        width: 80%;
+        height: 100vh;
+        height: 100svh;
+        margin-left: auto;
+        @include flex-end;
+        flex-direction: column;
+        background: url('../../assets/bgWhite.png');
+        background-color: $white-color;
+        background-repeat: repeat;
+        background-size: cover;
+        box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);
+        svg {
+            width: 35px;
+            height: 35px;
+            color: $accent-color;
+            margin: 0.5rem 1rem;
+        }
+        ul {
+            height: 100%;
+            width: 100%;
+            @include flex-center;
+            flex-direction: column;
+            li {
+                margin: 1rem;
+                a {
+                    color: $text-color;
+                    font-size: $fs-base;
+                    font-weight: $fw-regular;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: $transition-all;
+                    &:hover {
+                        color: $accent-color;
+                    }
+                }
+            }
+        }
+        @include media('md-screen') {
+            display: none;
+        }
+    }
+    @include media('md-screen') {
+        display: none;
+    }
+}

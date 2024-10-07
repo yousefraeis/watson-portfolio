@@ -1,0 +1,65 @@
+// _components.scss
+@import 'variables';
+@import 'mixins';
+
+.container {
+    width: 100%;
+    @include media('md-screen') {
+        width: 80%;
+        min-height: 100vh;
+        min-height: 100svh;
+        margin-inline: auto;
+        padding-inline: 2rem;
+    }
+}
+
+.heading {
+    font-size: $fs-2xl;
+    font-weight: $fw-extraBold;
+    color: $text-color900;
+    text-align: center;
+    text-transform: capitalize;
+    span {
+        color: $accent-color;
+    }
+    @include media('xl-screen') {
+        font-size: $fs-6xl;
+    }
+}
+
+.h1 {
+    font-size: $fs-2xl;
+    font-weight: $fw-extraBold;
+    color: $text-color900;
+    text-align: center;
+    text-transform: capitalize;
+    @include media('xs-screen') {
+        font-size: $fs-4xl;
+    }
+    @include media('xl-screen') {
+        font-size: $fs-6xl;
+    }
+}
+
+.h2 {
+    font-size: $fs-sm;
+    font-weight: $fw-regular;
+    color: $text-color900;
+    text-align: left;
+    @include media('xs-screen') {
+        font-size: $fs-base;
+    }
+    @include media('xl-screen') {
+        font-size: $fs-2xl;
+    }
+}
+
+.p {
+    text-align: left;
+    color: $text-color;
+    font-size: $fs-sm;
+    line-height: $leading-base;
+    @include media('xl-screen') {
+        font-size: $fs-xl;
+    }
+}

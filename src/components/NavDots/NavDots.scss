@@ -1,0 +1,37 @@
+.app__navdots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 1.2rem;
+
+
+    .app__navdots-dot {
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--clr-gray400);
+        margin: 0.5rem;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+            background-color: var(--clr-accent500);
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .app__navdots {
+        display: none;
+    }
+}

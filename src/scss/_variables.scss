@@ -1,0 +1,62 @@
+// _variables.scss
+
+:root {
+    // Colors
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+    --clr-gray500: #7d7d7d;
+    --clr-primary500: #edf2f8;
+    --clr-accent500: #313bac;
+
+    // Font Weights
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-extraBold: 800;
+
+    // Font Sizes
+    --fs-sm: 0.8rem;     // Small text
+    --fs-base: 1rem;    // Base text size
+    --fs-md: 1.25rem;   // Medium text size
+    --fs-lg: 1.5rem;    // Large text
+    --fs-xl: 1.75rem;   // Extra large text
+    --fs-2xl: 2rem;     // 2X Extra large text
+    --fs-3xl: 2.5rem;   // 3X Extra large text
+    --fs-4xl: 2.75rem;  // 4X Extra large text
+    --fs-6xl: 4rem;     // 6X Extra large text
+
+    // Line Heights
+    --leading-base: 1.5;          // Base leading (line height)
+}
+
+// Colors
+$primary-color: var(--clr-primary500);
+$accent-color: var(--clr-accent500);
+$text-color: var(--clr-gray500);
+$text-color900: var(--clr-black);
+$text-color100: var(--clr-white);
+$white-color: var(--clr-white);
+$black-color: var(--clr-black);
+
+// Fonts
+$font-base: var(--font-base);
+
+// Font Weights
+$fw-regular: var(--fw-regular);
+$fw-bold: var(--fw-bold);
+$fw-extraBold: var(--fw-extraBold);
+
+// Font size variables
+$fs-sm: var(--fs-sm);
+$fs-base: var(--fs-base);
+$fs-md: var(--fs-md);    // Medium font size added
+$fs-lg: var(--fs-lg);
+$fs-xl: var(--fs-xl);
+$fs-2xl: var(--fs-2xl);  // New 2X size variable added
+$fs-3xl: var(--fs-3xl);
+$fs-4xl: var(--fs-4xl);
+$fs-6xl: var(--fs-6xl);
+
+// Leading variable
+$leading-base: var(--leading-base);
+
+$transition-all: all 0.3s ease-in-out;

@@ -1,0 +1,17 @@
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    user-select: none;
+    p {
+        text-transform: uppercase;
+        color: var(--clr-gray500);
+    }
+}
+
+.copyright {
+    @media screen and (min-width: 768px) {
+        padding: 4rem;
+    }
+}
